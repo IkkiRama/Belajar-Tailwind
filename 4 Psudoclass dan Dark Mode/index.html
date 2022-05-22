@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Utility Part 1</title>
+    <title>Psudoclass & Dark Mode</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/tailwindcss">
         .myborder > * {
@@ -29,7 +29,7 @@
     </script>
 </head>
 
-<body>
+<body class="dark:bg-slate-800 dark:text-slate-200 ">
     <h1 class="font-bold">Mari Belajar Tailwind</h1>
 
     <section class="myborder">
@@ -62,11 +62,11 @@
 
 
     <section class="m-32 font-sans max-w-4xl mx-auto">
-        <h2 class="font-bold mb-2 text-6xl text-slate-800 leading-tight ">Mari Belajar Typography Pada <div
-                class="bg-gradient-to-tr from-indigo-700 via-green-600 to-blue-600 text-transparent bg-clip-text">
+        <h2 class="font-bold mb-2 text-6xl dark:text-slate-200 text-slate-800 leading-tight ">Mari Belajar Typography
+            Pada <div class="bg-gradient-to-tr from-indigo-700 via-green-600 to-blue-600 text-transparent bg-clip-text">
                 TailwindCSS</div>
         </h2>
-        <p class="mb-4 font-bold text-lg text-gray-700 ">Ditulis oleh <a href="#"
+        <p class="mb-4 font-bold text-lg text-gray-700 dark:text-slate-200 ">Ditulis oleh <a href="#"
                 class="italic text-blue-700 underline">Rifki
                 Romadhan</a>
             pada 12 November
@@ -115,6 +115,46 @@
             eveniet explicabo cum asperiores incidunt, laboriosam vitae aut quia quas corporis. Error?
         </p>
     </section>
+
+
+    <hr class="my-20">
+
+
+    <button
+        class="my-10 mx-32 px-5 py-3 bg-sky-500 hover:bg-sky-600 focus:bg-sky-700  text-white outline outline-2 outline-sky-300 rounded-lg focus:ring-4 focus:ring-sky-200 focus:ring-offset-2 ">Click
+        Meee</button>
+
+    <div class="max-w-lg my-10 border border-slate-200 hover:border-sky-300 hover:bg-sky-500 hover:text-white p-5
+        rounded-lg shadow-md mx-auto selection:bg-yellow-500 selection:text-black ">
+        <h5 class="font-bold text-2xl mb-3">My Card</h5>
+        <p
+            class="first-letter:text-6xl first-letter:uppercase first-letter:font-serif first-letter:float-left first-letter:mr-3 text-justify">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nobis repudiandae omnis. Nulla odit
+            perferendis fugit doloremque nemo, et, culpa assumenda dolor ab itaque sed alias, non similique pariatur
+            eum? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore nesciunt voluptates vitae! Sint vel,
+            eos alias odit velit saepe veritatis animi quibusdam deserunt reprehenderit fuga harum omnis ad in nemo.psum
+            dolor sit amet consectetur adipisicing elit. A aliquam repellat esse, earum enim, consequuntur harum dolor
+            et omnis nam doloribus obcaecati dolore repudiandae iusto eligendi autem nisi modi reprehenderit.
+        </p>
+    </div>
+
+
+    <div class="max-w-lg my-10 border border-slate-200 p-5
+        rounded-lg shadow-md mx-auto ">
+
+        <form action="">
+            <label for="Email"
+                class="font-semibold after:content-['*'] after:text-pink-500 after:font-semibold after:ml-2 ">Email</label>
+            <input type="email" id="Email" placeholder="Masukkan Email..."
+                class="w-full h-14 rounded-lg mt-2 px-5 py-3 border border-slate-300 shadow-sm shadow-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-300 focus:ring-2 sm:text-sm placeholder:italic font-semibold sm:text-[15px] tracking-wider invalid:text-pink-500 invalid:focus:border-pink-500 invalid:focus:shadow-pink-500 invalid:focus:ring-pink-500 peer text-black ">
+
+            <p class="text-sm mt-1 invisible text-pink-500 peer-invalid:visible ">Email Tidak Valid</p>
+        </form>
+
+    </div>
+
+
+
 </body>
 
 </html>
