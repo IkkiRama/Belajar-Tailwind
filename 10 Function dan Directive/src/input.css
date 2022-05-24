@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    h1 {
+        @apply font-bold;
+        font-size: 10rem;
+        color: theme(colors.ikki);
+    }
+}
+
+@layer components {
+    .grid-card {
+        @apply  aspect-[4/3] rounded-lg md:aspect-[3/4] overflow-hidden xl:aspect-[4/3] hover:scale-95 cursor-pointer transition-all duration-700;
+    }
+
+    .img-card {
+        @apply w-full h-full bg-cover object-cover object-center group-hover:scale-150 rounded-lg group-hover:rotate-12 transition-all duration-700;
+    }
+}
+
+@layer utilities {
+    #toggle:checked~label div.toggle-circle {
+        @apply translate-x-6;
+    }
+}
